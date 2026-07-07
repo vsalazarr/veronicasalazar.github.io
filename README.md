@@ -11,10 +11,10 @@ Personal academic website. Plain HTML/CSS, no build step.
 
 ## Publish on GitHub Pages
 
-1. Create a repo named `vsalazarr.github.io` (public) on github.com.
+1. Create a repo named `veronicasalazar.github.io` (public) on github.com.
 2. Add these files (drag-and-drop via "Add file > Upload files" works, no git needed).
 3. Add your `photo.jpg`.
-4. Repo Settings > Pages: source = `main` branch, `/ (root)`. Site goes live at `https://vsalazarr.github.io` within a minute.
+4. Repo Settings > Pages: source = `main` branch, `/ (root)`. Site goes live at `https://veronicasalazar.github.io` within a minute.
 
 ## Point your custom domain
 
