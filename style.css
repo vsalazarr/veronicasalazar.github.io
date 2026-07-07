@@ -1,0 +1,216 @@
+/* Veronica Salazar Restrepo — academic site stylesheet */
+
+:root {
+  --green: #2d6a4f;        /* forest green accent */
+  --green-dark: #1b4332;
+  --gold: #c8873a;         /* warm secondary accent */
+  --ink: #24292f;
+  --muted: #57606a;
+  --bg: #fdfcf9;           /* warm off-white */
+  --rule: #e4e0d7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a { color: var(--green); text-decoration: none; }
+a:hover { color: var(--green-dark); text-decoration: underline; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  border-top: 5px solid var(--green);
+  border-bottom: 1px solid var(--rule);
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 26px 0 18px;
+}
+
+.site-name {
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.site-name a { color: var(--ink); }
+.site-name a:hover { color: var(--green-dark); text-decoration: none; }
+
+nav { display: flex; gap: 26px; }
+
+nav a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 3px;
+}
+nav a:hover { color: var(--green); text-decoration: none; }
+nav a.active { color: var(--green); border-bottom: 2px solid var(--gold); }
+
+/* Main */
+main { padding: 48px 0 64px; }
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--green-dark);
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--green-dark);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 6px;
+  margin: 44px 0 20px;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+/* Home layout */
+.profile {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  display: block;
+}
+
+.photo-caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.profile-text { flex: 1; min-width: 300px; }
+.profile-text p:first-child { margin-top: 0; }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  font-size: 0.95rem;
+}
+.contact-list li { margin-bottom: 6px; }
+.contact-list .label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-block;
+  width: 92px;
+}
+
+.interests span {
+  display: inline-block;
+  background: #eaf2ee;
+  color: var(--green-dark);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin: 0 6px 6px 0;
+}
+
+/* Papers */
+.paper { margin-bottom: 30px; }
+
+.paper-title {
+  font-size: 1.08rem;
+  margin: 0 0 2px;
+  font-weight: 700;
+}
+
+.paper-meta {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.paper-meta .venue { font-style: italic; }
+
+.paper-links { font-size: 0.88rem; }
+.paper-links a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 1px 9px;
+  margin-right: 6px;
+}
+.paper-links a:hover { background: var(--green); color: #fff; text-decoration: none; }
+
+details.abstract { margin-top: 8px; }
+
+details.abstract summary {
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+details.abstract summary:hover { color: var(--green); }
+
+details.abstract p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border-left: 3px solid var(--green);
+  padding: 12px 16px;
+  margin: 10px 0 0;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 20px 0 32px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 640px) {
+  .profile { flex-direction: column; }
+  .profile-photo { width: 200px; }
+  .header-inner { flex-direction: column; gap: 10px; }
+}
